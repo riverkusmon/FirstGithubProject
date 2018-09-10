@@ -36,12 +36,12 @@ public class Controller {
 		
 		System.out.println("What is your favorite number");
 		
-		textScanner.hasNextInt();
+		//textScanner.hasNextInt();
 		int userNumber = textScanner.nextInt();
 		System.out.println("your favorite number is: "+userNumber);
 		
 		
-		System.out.println("type in some info");
+		System.out.println("end of questtionaire thanks");
 		
 		//need to call .nextLine() to consume the enter press after the call to .next .nextInt or
 		//.nextDouble
@@ -49,6 +49,38 @@ public class Controller {
 		textScanner.nextLine();
 		
 		textScanner.close();
+	}
+	
+	public boolean validInt(String sample)
+	{
+		boolean isValid = false;
+		try {
+		Integer.parseInt(sample);
+		isValid = true;
+			}
+		catch(NumberFormatException error)	
+		{
+			System.out.println("typy a number");
+		}
+		
+		return isValid;
+		
+	}
+	
+	public boolean validDouble(String example)
+	{
+		boolean isValid = false;
+		try {
+			Double.parseDouble(example);
+			isValid = true;
+			}
+
+		catch(NumberFormatException oops)
+		{
+			System.out.println("Only floating point values are accepted AKA a number with a . in it");
+		}
+		
+		return true;
 	}
 	
 	
