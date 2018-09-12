@@ -34,10 +34,12 @@ public class Controller {
 		
 		textScanner = new Scanner(System.in); //Initialization of the textScanner variable
 		
-		System.out.println("What is your favorite number");
 		
-		//textScanner.hasNextInt();
+		
+		System.out.println("What is your favorite number");
 		int userNumber = textScanner.nextInt();
+		validInt();
+		
 		System.out.println("your favorite number is: "+userNumber);
 		
 		
@@ -51,11 +53,11 @@ public class Controller {
 		textScanner.close();
 	}
 	
-	public boolean validInt(String sample)
+	public boolean validInt(userNumber)
 	{
 		boolean isValid = false;
 		try {
-		Integer.parseInt(sample);
+		Integer.parseInt(userNumber);
 		isValid = true;
 			}
 		catch(NumberFormatException error)	
