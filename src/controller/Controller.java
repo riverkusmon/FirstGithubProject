@@ -55,9 +55,11 @@ public class Controller {
 	
 	public boolean validInt(userNumber)
 	{
+		//declares and initializes a boolean variable to false
 		boolean isValid = false;
 		try {
-		Integer.parseInt(userNumber);
+			//tries to convert the text to an integer
+			Integer.parseInt(userNumber);
 		isValid = true;
 			}
 		catch(NumberFormatException error)	
